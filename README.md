@@ -19,6 +19,8 @@
 - I'm afraid to be deceived by the jobs in the field (get bored or something)
 - I'm afraid to participate in anyway in some project that i might regret later. Like the guy who uload an open-source plan to print a fonctionnal 3D gun at home (well, he doesn't regret anything but i would), or those workin on tech to have as much of your watchtime on their plateform (netflix, insta and co...) My opinion is that those kind of jobs don't bring good stuff to our society but play on its bias to mess with it. So I really hope that 10years from now, i won't find myself in that kind of employement.
 
+![MyfavGif3](https://acegif.com/wp-content/uploads/office-space-gifs-5.gif)
+
 ### The things I look forward to
 
 - get a job in tech field
@@ -39,6 +41,8 @@
 - I can go shopping for something and come back with everything exept the one i went for
 - I can tell a short story long
 
+![MyfavGif2](https://c.tenor.com/HDvlGQ9RKLoAAAAC/rat-cool.gif)
+
 ## 💞️ The things I like the most in this universe
 
 - *Hip-Hop* Music
@@ -48,7 +52,7 @@
 ## 👍 My Fav Songs
 [Chance The Rapper - Cocoa butter kisses](https://www.youtube.com/watch?v=-G0FOkF3BmQ&ab_channel=OldSchoolHipHop)
 ## 👍 My Fav Gifs
-![MyfavGif](https://www.photofunky.net/output/image/b/5/d/4/b5d436/photofunky.gif) ![MyfavGif2](https://c.tenor.com/HDvlGQ9RKLoAAAAC/rat-cool.gif) ![MyfavGif3](https://acegif.com/wp-content/uploads/office-space-gifs-5.gif) ![MyfavGif4](https://tntmusic.ru/media/content/article/2020-09-22_08-46-36__1fdc6c8a-fcb0-11ea-bdbb-899461a2f0e9.jpg)
+![MyfavGif](https://www.photofunky.net/output/image/b/5/d/4/b5d436/photofunky.gif) 
 
 <!---
 SamiraBansaccal/SamiraBansaccal is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
