@@ -48,7 +48,8 @@
 ## 👍 My Fav Songs
 [Chance The Rapper - Cocoa butter kisses](https://www.youtube.com/watch?v=-G0FOkF3BmQ&ab_channel=OldSchoolHipHop)
 ## 👍 My Fav Gifs
-![MyfavGif](https://www.photofunky.net/output/image/b/5/d/4/b5d436/photofunky.gif)
+![MyfavGif](https://www.photofunky.net/output/image/b/5/d/4/b5d436/photofunky.gif) ![MyfavGif2](https://c.tenor.com/HDvlGQ9RKLoAAAAC/rat-cool.gif) ![MyfavGif3](https://acegif.com/wp-content/uploads/office-space-gifs-5.gif) ![MyfavGif4](https://tntmusic.ru/media/content/article/2020-09-22_08-46-36__1fdc6c8a-fcb0-11ea-bdbb-899461a2f0e9.jpg)
+
 <!---
 SamiraBansaccal/SamiraBansaccal is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
