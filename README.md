@@ -2,7 +2,7 @@
 
 ## 👀 I’m interested in political sciences but i don't like to talk about it...
 
-- BC it's what i studied @university for several years so it has shaped the way I see the world but I don't like to talk about politics because it's often an ego-debate between people more than actualy seeking for solutions/facts (in my humble opinion) but despite that, i often think about political views no matter what's the issues, even in web developpement field. That's why i'm really lookin forward to work on open-source project aiming to be useful to our society. Maybe to improve politcics-citizens relationship or just a useful tool to public administrations to avoid being dependant on foreign and *too big to trust* companies.
+- BC it's what i studied @university for several years so it has shaped the way I see the world but I don't like to talk about politics because it's often an ego-debate between people more than actualy seeking for solutions/facts (in my humble opinion) but despite that, i often think about political views no matter what's the issues, even in web developpement field. That's why i'm really lookin forward to work on projects aiming to be useful to our society. Maybe to improve politcics-citizens relationship or just a useful tool to public administrations to avoid being dependant on foreign and *too big to trust* companies.
 
 ## 🌱 I’m currently learning web developpment @BeCode
 
