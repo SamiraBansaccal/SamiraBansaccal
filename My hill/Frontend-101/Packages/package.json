@@ -1,0 +1,15 @@
+{
+  "name": "packages",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mapbox": "^1.0.0-beta10",
+    "parcel": "^2.3.2"
+  }
+}
