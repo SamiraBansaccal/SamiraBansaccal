@@ -1,7 +1,6 @@
 {
   "name": "packages",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,6 +9,10 @@
   "license": "ISC",
   "dependencies": {
     "mapbox": "^1.0.0-beta10",
+    "mapbox-gl": "^2.7.0",
     "parcel": "^2.3.2"
-  }
+  },
+  "devDependencies": {},
+  "keywords": [],
+  "description": ""
 }
