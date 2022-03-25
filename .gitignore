@@ -1,9 +1,4 @@
 node_modules
-My hill/Frontend-101/Packages/.parcel-cache/data.mdb
-My hill/Frontend-101/Packages/.parcel-cache/data.mdb
-My hill/Frontend-101/Packages/.parcel-cache/data.mdb
-My hill/Frontend-101/Packages/.parcel-cache/data.mdb
-My hill/Frontend-101/Packages/.parcel-cache/data.mdb
-My hill/Frontend-101/Packages/dist/index.3d214d75.js.map
-My hill/Frontend-101/Packages/dist/index.3d214d75.js
-My hill/Frontend-101/Packages/dist/index.html
+dist
+.parcel-cache
+
