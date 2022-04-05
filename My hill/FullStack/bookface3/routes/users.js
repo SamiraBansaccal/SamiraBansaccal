@@ -5,24 +5,20 @@ const bcrypt = require('bcrypt');
 const passport = require('passport');
 
 //login handle
-router.get('/login',(req,res)=>{
-    res.render('login');
+router.get('/',(req,res)=>{
+    res.render('Welcome')
 })
-router.get('/register',(req,res)=>{
-    res.render('register')
-    })
-
 //Register handle
-router.post('/login',(req,res, next)=>{
+router.post('/sign-in',(req,res, next)=>{
     passport.authenticate('local',{
         successRedirect : '/dashboard',
-        failureRedirect : '/users/login',
+        failureRedirect : '/users/',
         failureFlash : true,
         })(req,res,next);
     })
 
   //register post handle
-router.post('/register',(req,res)=>{
+router.post('/sign-up',(req,res) => {
     const {name,email, password, password2} = req.body;
     let errors = [];
     console.log(' Name ' + name+ ' email :' + email+ ' pass:' + password);
@@ -38,7 +34,7 @@ router.post('/register',(req,res)=>{
         errors.push({msg : 'password atleast 6 characters'})
     }
     if(errors.length > 0 ) {
-    res.render('register', {
+    res.render('welcome', {
         errors : errors,
         name : name,
         email : email,
@@ -50,14 +46,13 @@ router.post('/register',(req,res)=>{
         console.log(user);
         if(user) {
             errors.push({msg: 'email already registered'});
-            res.render('register',{errors,name,email,password,password2})
+            res.render('welcome',{errors,name,email,password,password2})
         } else {
             const newUser = new User({
                 name : name,
                 email : email,
                 password : password
             });
-
             //hash password
             bcrypt.genSalt(10,(err,salt)=>
             bcrypt.hash(newUser.password,salt,
@@ -69,23 +64,20 @@ router.post('/register',(req,res)=>{
                     newUser.save()
                     .then((value)=>{
                         console.log(value)
-                        req.flash('success_msg','You have now registered!')
-                    res.redirect('/users/login');
+                        req.flash('success_msg','You have now registered! click on "sign in" to continue')
+                    res.redirect('/users/');
                     })
                     .catch(value=> console.log(value));
-
                 }));
             }
         })
     }
     })
 
-//logout
-router.post('/logout', function(req, res){
+//logout handle
+router.get('/logout', (req, res) => {
     req.logout();
     res.redirect('/');
 });
 
-router.get('/logout',(req,res)=>{
-})
 module.exports  = router;

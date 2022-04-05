@@ -1,34 +1,55 @@
-const env = process.env.NODE_ENV || 'development';
-const config = require('../config/config')[env];
-const mongoose = require('mongoose');
+const dotenv = require('dotenv');
+dotenv.config();
+
 const express = require('express');
 const app = express();
-const bodyParser = require('body-parser');
-const passport = require('passport');
-const LocalStrategy = require('passport-local').Strategy;
-const bcrypt = require('bcrypt');
-const User = require('../models/user');
+const router = express.Router();
+
+const mongoose = require('mongoose');
+
+const expressEjsLayout = require('express-ejs-layouts')
+
 const session = require('express-session');
+
 const flash = require('connect-flash');
-const methodOverride = require('method-override');
-const cookieParser = require('cookie-parser');
-const path = require('path');
-const favicon = require('serve-favicon');
-const morgan = require('morgan');
-const mongoStore = require('connect-mongo')(session);
-const flashMessages = require('connect-flash');
-const flash = flashMessages();
-const passportConfig = require('./passport');
-const mongooseConfig = require('./mongoose');
-const routes = require('./routes');
-const helpers = require('./helpers');
-const errorHandlers = require('./handlers/errorHandlers');
-const winston = require('winston');
-const expressWinston = require('express-winston');
-const expressValidator = require('express-validator');
-const helmet = require('helmet');
-const compression = require('compression');
-const cors = require('cors');
-const helmet = require('helmet');
-const csrf = require('csurf');
+
+const passport = require('passport');
+require("./config/passport")(passport)
+
+//mongoose connection to db
+mongoose.connect(process.env.DB_CONNECT,{useNewUrlParser: true, useUnifiedTopology : true})
+.then(() => console.log('connected to db'))
+.then(() => app.listen(process.env.PORT, () => console.log("Server Up and running on localhost:" + process.env.PORT)))
+.catch((err)=> console.log(err));
+
+//so we can access the css
+app.use("/static", express.static("public"));
+
+//EJS
+app.set('view engine','ejs');
+app.use(expressEjsLayout);
+
+//BodyParser
+app.use(express.urlencoded({extended : false}));
+
+//express session
+app.use(session({
+  secret : 'secret',
+  resave : true,
+  saveUninitialized : true
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+
+ //use flash
+app.use(flash());
+app.use((req,res,next)=> {
+  res.locals.success_msg = req.flash('success_msg');
+  res.locals.error_msg = req.flash('error_msg');
+  res.locals.error  = req.flash('error');
+  next();
+})
+//Routes
+app.use('/',require('./routes/index'));
+app.use('/users',require('./routes/users'));
 
