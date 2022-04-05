@@ -3,6 +3,7 @@ const router = express.Router();
 const User = require("../models/user");
 const bcrypt = require('bcrypt');
 const passport = require('passport');
+
 //login handle
 router.get('/login',(req,res)=>{
     res.render('login');
@@ -10,16 +11,18 @@ router.get('/login',(req,res)=>{
 router.get('/register',(req,res)=>{
     res.render('register')
     })
+
 //Register handle
 router.post('/login',(req,res, next)=>{
-  passport.authenticate('local',{
-    successRedirect : '/dashboard',
-    failureRedirect : '/users/login',
-    failureFlash : true,
-    })(req,res,next);
-  })
+    passport.authenticate('local',{
+        successRedirect : '/dashboard',
+        failureRedirect : '/users/login',
+        failureFlash : true,
+        })(req,res,next);
+    })
+
   //register post handle
-  router.post('/register',(req,res)=>{
+router.post('/register',(req,res)=>{
     const {name,email, password, password2} = req.body;
     let errors = [];
     console.log(' Name ' + name+ ' email :' + email+ ' pass:' + password);
@@ -30,7 +33,6 @@ router.post('/login',(req,res, next)=>{
     if(password !== password2) {
         errors.push({msg : "passwords dont match"});
     }
-
     //check if password is more than 6 characters
     if(password.length < 6 ) {
         errors.push({msg : 'password atleast 6 characters'})
@@ -43,13 +45,13 @@ router.post('/login',(req,res, next)=>{
         password : password,
         password2 : password2})
     } else {
-        //validation passed
-      User.findOne({email : email}).exec((err,user)=>{
+    //validation passed
+        User.findOne({email : email}).exec((err,user)=>{
         console.log(user);
         if(user) {
             errors.push({msg: 'email already registered'});
             res.render('register',{errors,name,email,password,password2})
-          } else {
+        } else {
             const newUser = new User({
                 name : name,
                 email : email,
@@ -74,10 +76,16 @@ router.post('/login',(req,res, next)=>{
 
                 }));
             }
-      })
+        })
     }
     })
+
 //logout
+router.post('/logout', function(req, res){
+    req.logout();
+    res.redirect('/');
+});
+
 router.get('/logout',(req,res)=>{
- })
+})
 module.exports  = router;
