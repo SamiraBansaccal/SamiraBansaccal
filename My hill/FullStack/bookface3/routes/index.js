@@ -8,7 +8,7 @@ router.get('/dashboard',(req,res)=>{
 })
 //login and register page
 router.get('/', (req,res)=>{
-    res.render('welcome');
+    res.render('index',{errors  : req.flash('error')});
 })
 
 module.exports = router;

@@ -23,7 +23,8 @@ mongoose.connect(process.env.DB_CONNECT,{useNewUrlParser: true, useUnifiedTopolo
 .catch((err)=> console.log(err));
 
 //so we can access the css
-app.use("/static", express.static("public"));
+//app.use("/static", express.static("public"));
+app.use('/static', express.static(__dirname + '/public'));
 
 //EJS
 app.set('view engine','ejs');

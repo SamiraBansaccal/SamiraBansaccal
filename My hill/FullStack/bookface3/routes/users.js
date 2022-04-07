@@ -6,7 +6,7 @@ const passport = require('passport');
 
 //login handle
 router.get('/',(req,res)=>{
-    res.render('Welcome')
+    res.render('index')
 })
 //Register handle
 router.post('/sign-in',(req,res, next)=>{
@@ -34,7 +34,7 @@ router.post('/sign-up',(req,res) => {
         errors.push({msg : 'password atleast 6 characters'})
     }
     if(errors.length > 0 ) {
-    res.render('welcome', {
+    res.render('index', {
         errors : errors,
         name : name,
         email : email,

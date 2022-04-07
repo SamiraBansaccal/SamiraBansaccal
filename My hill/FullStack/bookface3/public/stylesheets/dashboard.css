@@ -5,6 +5,16 @@
   margin: 0px;
 }
 
+.logo{
+  width: 75px;
+  height:auto;
+  position:relative;
+  padding-top:20px;
+  padding-bottom:20px;
+  padding-left:0px;
+  padding-right:0px;
+}
+
 .viewport{
   position:relative;
   background: linear-gradient(90deg, #20e6b3, #8e11f3, #4c20d4);
